@@ -1,0 +1,5 @@
+myFile = open(r'F:\Taaran Jain\Index of Branches of Science.txt', "r")
+str = myFile.read()
+size = len(str)
+print("Size of the given file Movie is -")
+print(size, "bytes")
