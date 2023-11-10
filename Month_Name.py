@@ -1,37 +1,26 @@
-month = int(input("Enter the number of month :"))
+# Get user input for the number of the month
+month = int(input("Enter the number of month: "))
 
-if month == 1:
-    print("It's January")
+# Define a list of month names
+month_names = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+]
 
-elif month == 2:
-    print("It's February")
-
-elif month == 3:
-    print("It's March")
-
-elif month == 4:
-    print("It's April")
-
-elif month == 5:
-    print("It's May")
-
-elif month == 6:
-    print("It's June")
-
-elif month == 7:
-    print("It's July")
-
-elif month == 8:
-    print("It's August")
-
-elif month == 9:
-    print("It's September")
-
-elif month == 10:
-    print("It's October")
-
-elif month == 11:
-    print("It's November")
-
+# Check if the entered month number is valid
+if 1 <= month <= 12:
+    print(
+        "It's", month_names[month - 1]
+    )  # Subtract 1 to access the correct index in the list
 else:
-    print("It's December")
+    print("Invalid month number")

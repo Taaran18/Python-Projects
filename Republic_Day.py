@@ -4,7 +4,7 @@ from turtle import *
 # screen for output
 screen = turtle.Screen()
 
-# Defining a turtle Instance
+# Defining a turtle instance
 t = turtle.Turtle()
 speed(0)
 
@@ -75,6 +75,7 @@ t.pendown()
 t.begin_fill()
 t.circle(20)
 t.end_fill()
+
 # Spokes
 t.penup()
 t.goto(0, 0)
@@ -85,6 +86,5 @@ for i in range(24):
     t.backward(60)
     t.left(15)
 
-# to hold the
-# output window
+# to hold the output window
 turtle.done()

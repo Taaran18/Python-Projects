@@ -1,29 +1,22 @@
-marks = int(input("Enter your marks :"))
+# Get input from the user
+marks = int(input("Enter your marks: "))
 
+# Check the grade based on the marks
 if marks >= 90:
     print("Grade A")
-    per = (marks / 100) * 100
-    print(per)
-
-if 80 <= marks < 90:
+elif 80 <= marks < 90:
     print("Grade B")
-    per = (marks / 100) * 100
-    print(per)
-
-if 70 <= marks < 80:
+elif 70 <= marks < 80:
     print("Grade C")
-    per = (marks / 100) * 100
-    print(per)
-
-if 60 <= marks < 70:
+elif 60 <= marks < 70:
     print("Grade D")
-    per = (marks / 100) * 100
-    print(per)
-
-if 50 <= marks < 60:
+elif 50 <= marks < 60:
     print("Grade E")
-    per = (marks / 100) * 100
-    print(per)
-
 else:
     print("FAIL")
+
+# Calculate percentage
+per = (marks / 100) * 100
+
+# Print the calculated percentage
+print("Percentage:", per)

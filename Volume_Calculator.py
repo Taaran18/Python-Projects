@@ -1,91 +1,97 @@
 import math
 
-print("Enter the choice below :")
 
-print("1. Caluculate Volume of Cube.")
-print("2. Caluculate Volume of Cuboid.")
-print("3. Caluculate Volume of Cylinder.")
-print("4. Caluculate Volume of Cone.")
-print("5. Caluculate Volume of Sphere.")
-print("6. Caluculate Volume of Hemisphere.")
-print("7. Caluculate Volume of Frustum.")
-print("8. Exit.")
-choice = int(input("Enter your choice :"))
+# Function to calculate the volume of a cube
+def calculate_cube_volume():
+    side = float(input("Enter the side of the Cube: "))
+    volume = side**3
+    print("The side is:", side)
+    print("The volume is:", volume)
 
-while choice != 8 or choice > 0:
+
+# Function to calculate the volume of a cuboid
+def calculate_cuboid_volume():
+    length = float(input("Enter the length of the Cuboid: "))
+    width = float(input("Enter the width of the Cuboid: "))
+    height = float(input("Enter the height of the Cuboid: "))
+    volume = length * width * height
+    print("The length, width, and height are:", length, width, height)
+    print("The volume of the Cuboid is:", volume)
+
+
+# Function to calculate the volume of a cylinder
+def calculate_cylinder_volume():
+    radius = float(input("Enter the radius of the Cylinder: "))
+    height = float(input("Enter the height of the Cylinder: "))
+    volume = math.pi * radius**2 * height
+    print("The radius and height are:", radius, height)
+    print("The volume of the Cylinder is:", volume)
+
+
+# Function to calculate the volume of a cone
+def calculate_cone_volume():
+    radius = float(input("Enter the radius of the Cone: "))
+    height = float(input("Enter the height of the Cone: "))
+    volume = (math.pi * radius**2 * height) / 3
+    print("The radius and height are:", radius, height)
+    print("The volume of the Cone is:", volume)
+
+
+# Function to calculate the volume of a sphere
+def calculate_sphere_volume():
+    radius = float(input("Enter the radius of the Sphere: "))
+    volume = 4 / 3 * (math.pi * radius**3)
+    print("The radius is:", radius)
+    print("The volume of the Sphere is:", volume)
+
+
+# Function to calculate the volume of a hemisphere
+def calculate_hemisphere_volume():
+    radius = float(input("Enter the radius of the Hemisphere: "))
+    volume = 2 / 3 * (math.pi * radius**3)
+    print("The radius is:", radius)
+    print("The volume of the Hemisphere is:", volume)
+
+
+# Function to calculate the volume of a frustum
+def calculate_frustum_volume():
+    radius1 = float(input("Enter the 1st radius of the Frustum: "))
+    radius2 = float(input("Enter the 2nd radius of the Frustum: "))
+    height = float(input("Enter the height of the Frustum: "))
+    volume = (math.pi / 3) * height * (radius1**2 + radius2**2 + radius1 * radius2)
+    print("The 1st radius, 2nd radius, and height are:", radius1, radius2, height)
+    print("The volume of the Frustum is:", volume)
+
+
+# Main program
+while True:
+    print("\nEnter the choice below:")
+    print("1. Calculate Volume of Cube.")
+    print("2. Calculate Volume of Cuboid.")
+    print("3. Calculate Volume of Cylinder.")
+    print("4. Calculate Volume of Cone.")
+    print("5. Calculate Volume of Sphere.")
+    print("6. Calculate Volume of Hemisphere.")
+    print("7. Calculate Volume of Frustum.")
+    print("8. Exit.")
+
+    choice = int(input("Enter your choice: "))
+
     if choice == 1:
-        length = float(input("Enter the lenght of the Cuboid :"))
-        width = float(input("Enter the width of the Cuboid :"))
-        height = float(input("Enter the height of the Cuboid :"))
-
-        volume1 = length * width * height
-
-        print("The length, width and height are :", length, width, height)
-        print("The Volume of the Cuboid is :", volume1)
+        calculate_cube_volume()
     elif choice == 2:
-        side = float(input("Enter the side of the Cube :"))
-
-        volume2 = side ** 3
-
-        print("The side is :", side)
-        print("The volume is :", volume2)
-
+        calculate_cuboid_volume()
     elif choice == 3:
-        radius = float(input("Enter the raduis of the Cylinder :"))
-        height = float(input("Enter the height of the Cylinder :"))
-
-        volume3 = math.pi * radius ** 2 * height
-
-        print("The radius and height are :", radius, height)
-        print("The Volume of Cylinder is :", volume3)
+        calculate_cylinder_volume()
     elif choice == 4:
-        radius = float(input("Enter the raduis of the Cone :"))
-        height = float(input("Enter the height of the Cone :"))
-
-        volume4 = (math.pi * radius ** 2 * height) / 3
-
-        print("The radius and height are :", radius, height)
-        print("The Volume of Cone is :", volume4)
-
+        calculate_cone_volume()
     elif choice == 5:
-        radius = float(input("Enter the raduis of the Sphere :"))
-
-        volume5 = 4 / 3 * (math.pi * radius ** 3)
-
-        print("The radius is :", radius)
-        print("The Volume of Sphere is :", volume5)
-
+        calculate_sphere_volume()
     elif choice == 6:
-        radius = float(input("Enter the raduis of the hemisphere :"))
-
-        volume6 = 2 / 3 * (math.pi * radius ** 3)
-
-        print("The radius is :", radius)
-        print("The Volume of Hemisphere is :", volume6)
-
+        calculate_hemisphere_volume()
     elif choice == 7:
-        radius1 = float(input("Enter the 1st raduis of the Frustum :"))
-        radius2 = float(input("Enter the 2nd raduis of the Frustum :"))
-        height = float(input("Enter the height of the Frustum :"))
-
-        volume7 = (math.pi / 3) * height * (radius1 ** 2 * radius2 ** 2 * radius1 * radius2)
-
-        print("The 1st raduis, 2nd raduis and Height are : ", radius1, radius2, height)
-        print("The volume of Frustum is :", volume7)
-
+        calculate_frustum_volume()
     elif choice == 8:
         break
-
     else:
-        print("invalid input")
-    print()
-    print("Enter the choice below :")
-    print("1. Caluculate Volume of Cube.")
-    print("2. Caluculate Volume of Cuboid.")
-    print("3. Caluculate Volume of Cylinder.")
-    print("4. Caluculate Volume of Cone.")
-    print("5. Caluculate Volume of Sphere.")
-    print("6. Caluculate Volume of Hemisphere.")
-    print("7. Caluculate Volume of Frustum.")
-    print("8. Exit.")
-    choice = int(input("Enter your choice :"))
+        print("Invalid input. Please enter a number between 1 and 8.")

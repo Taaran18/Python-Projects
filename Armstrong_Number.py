@@ -1,5 +1,5 @@
 # Get user input for a number
-num = int(input("Enter a number: "))
+num = int(input("Enter a number: ")) # num = 371
 
 # Initialize sum to 0
 sum = 0

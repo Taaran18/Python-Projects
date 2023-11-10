@@ -1,5 +1,15 @@
-myFile = open(r'F:\Taaran Jain\Index of Branches of Science.txt', "r")
-str = myFile.read()
-size = len(str)
-print("Size of the given file Movie is -")
-print(size, "bytes")
+# Open the file 'new.txt' in read-only mode
+myFile = open(r'new.txt', "r")
+
+# Read the content of the file into a string
+file_content = myFile.read()
+
+# Calculate the size of the file (length of the string)
+file_size = len(file_content)
+
+# Print the size of the file in bytes
+print("Size of the given file 'new.txt' is:")
+print(file_size, "bytes")
+
+# Close the file
+myFile.close()
